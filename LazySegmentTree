@@ -14,7 +14,8 @@ template<
 
     void pushdown(int id, int l, int r)
     {
-        int tmp = lz[id], x = id << 1, y = x | 1;
+        T tmp = lz[id];
+        int x = id << 1, y = x | 1;
         int mid = (l + r) >> 1;
         st[x] += tmp * (mid - l + 1); lz[x] += tmp;
         st[y] += tmp * (r - mid) ; lz[y] += tmp;
